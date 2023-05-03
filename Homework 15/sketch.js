@@ -20,7 +20,9 @@ var shapeYSpeeds = [];
 var mouseShapeX;
 var mouseShapeY;
 
-var rectangleObject
+var rectangleObject1
+var rectangleObject2
+var rectangleObject3
 
 function drawCharacter() {}
 fill(136, 8, 8);
@@ -29,7 +31,9 @@ circle(characterX, characterY, 25);
 function setup() {
   createCanvas(500, 600);
   
-  rectangleObject = new Rectangle(100, 200, 10, 50, 120, 50, 90)
+  rectangleObject1 = new Rectangle(100, 200, 10, 50, 120, 50, 90)
+  rectangleObject2 = new Rectangle(90, 90, 30, 70, 20, 30, 80)
+  rectangleObject3 = new Rectangle(300, 20, 10, 50, 35, 65, 92)
   
   // get a random speed when the it first starts
   for (var i = 0; i < 5; i++) {
@@ -53,7 +57,9 @@ function draw() {
   fill(0);
 
   
-  rectangleObject.display();
+  rectangleObject1.draw();
+  rectangleObject2.draw(); 
+  rectangleObject3.draw();
   
   // call createBorders function
   createBorders(5);
